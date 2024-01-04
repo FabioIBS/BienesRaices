@@ -32,7 +32,24 @@ function eventListeners() {
 }
 
 function mostrarMetodosContacto(e) {
-	const contactoDiv = querySelector("#contacto");
+	const contactoDiv = document.querySelector("#contacto");
+	if (e.target.value === "telefono") {
+		contactoDiv.innerHTML = `
+			<label for="telefono">Número Telefónico:</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="Tu Teléfono">
+
+			<p>Elija la fecha y hora para ser contactado.</p>
+            <label for="fecha">Fecha:</label>
+            <input id="fecha" name="fecha" type="date">
+            <label for="hora">Hora:</label>
+            <input id="hora" name="hora" type="time" min="09:00" max="18:00">
+		`;
+	} else {
+		contactoDiv.innerHTML = `
+			<label for="email">E-mail:</label>
+            <input id="email" name="email" type="email" required placeholder="Tu E-mail">
+		`;
+	}
 }
 function navegacionResponsive() {
 	const navegacion = document.querySelector(".navegacion");

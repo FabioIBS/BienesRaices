@@ -9,14 +9,13 @@
     <form class="formulario" action="/contacto" method="POST">
         <fieldset>
             <legend>Información Personal</legend>
+
             <label for="nombre">Nombre:</label>
             <input id="nombre" type="text" name="nombre" required placeholder="Tu Nombre">
-            <label for="email">E-mail:</label>
-            <input id="email" name="email" type="email" required placeholder="Tu E-mail">
-            <label for="telefono">Teléfono:</label>
-            <input id="telefono" name="telefono" type="tel" placeholder="Tu Teléfono">
+
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" required type="text" placeholder="Tu Nombre"></textarea>
+
         </fieldset>
         <fieldset>
             <legend>Información sobre la propiedad</legend>
@@ -39,11 +38,6 @@
                 <input required name="contacto" value="email" type="radio" id="contactar-email">
             </div>
             <div id="contacto"></div>
-            <p>Si eligió teléfono, elija la fecha y hora para ser contactado.</p>
-            <label for="fecha">Fecha:</label>
-            <input id="fecha" name="fecha" type="date">
-            <label for="hora">Hora:</label>
-            <input id="hora" name="hora" type="time" min="09:00" max="18:00">
         </fieldset>
 
         <input type="submit" value="Enviar" class="boton-verde">
